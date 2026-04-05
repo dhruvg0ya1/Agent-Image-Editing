@@ -1,0 +1,107 @@
+{
+  "session_id": "a9d850749789",
+  "turns": [
+    {
+      "instruction": "remove the spatula from the lady's hand and also remove the 2 glasses from the table",
+      "parsed_edits": [
+        {
+          "edit_id": "edit-1",
+          "original_text": "remove the spatula from the lady's hand and",
+          "verb": "remove",
+          "target": "spatula",
+          "scope": "local",
+          "priority": 0,
+          "dependencies": [],
+          "modifiers": [
+            "the lady's hand and"
+          ]
+        },
+        {
+          "edit_id": "edit-2",
+          "original_text": "remove the 2 glasses from the table",
+          "verb": "remove",
+          "target": "2 glasses",
+          "scope": "local",
+          "priority": 1,
+          "dependencies": [],
+          "modifiers": [
+            "the table"
+          ]
+        }
+      ],
+      "selected_plan": {
+        "plan_id": "plan-005",
+        "score": 0.679,
+        "score_breakdown": {
+          "order_alignment": 1.0,
+          "locality": 1.0,
+          "dependency_score": 1.0,
+          "entity_bonus": 0.55,
+          "mode_fit": 0.8,
+          "learned_value": 0.5,
+          "risk_penalty": 0.18,
+          "tool_switch_penalty": 0.0,
+          "total": 0.679
+        },
+        "steps": [
+          {
+            "step_id": "edit-1-preview_local",
+            "edit_id": "edit-1",
+            "order": 1,
+            "verb": "remove",
+            "target": "spatula",
+            "scope": "local",
+            "mode": "preview_local",
+            "prompt": "remove the spatula from the lady's hand and. Target: spatula. Modifiers: the lady's hand and. Treat this as a tight local edit after preview localization.",
+            "padding": 22,
+            "risk": 0.18
+          },
+          {
+            "step_id": "edit-2-preview_local",
+            "edit_id": "edit-2",
+            "order": 2,
+            "verb": "remove",
+            "target": "2 glasses",
+            "scope": "local",
+            "mode": "preview_local",
+            "prompt": "remove the 2 glasses from the table. Target: 2 glasses. Modifiers: the table. Treat this as a tight local edit after preview localization.",
+            "padding": 22,
+            "risk": 0.18
+          }
+        ]
+      },
+      "reward": 0.168,
+      "bboxes": [
+        {
+          "left": 149,
+          "top": 199,
+          "right": 331,
+          "bottom": 441,
+          "width": 182,
+          "height": 242
+        },
+        {
+          "left": 130,
+          "top": 93,
+          "right": 234,
+          "bottom": 163,
+          "width": 104,
+          "height": 70
+        }
+      ]
+    }
+  ],
+  "folded_context": {
+    "summary": "1 prior edit turn(s). Most frequent targets: spatula, 2 glasses. Most common edit verbs: remove. Average quality reward so far: 0.17.",
+    "active_entities": [
+      "spatula",
+      "2 glasses"
+    ],
+    "constraints": [
+      "Preserve regions outside the inferred bounding box unless the edit is explicitly global.",
+      "Reuse prior entities and style cues when the user continues a session.",
+      "Prefer lower-risk local edits before broad restyling steps."
+    ],
+    "turn_count": 1
+  }
+}

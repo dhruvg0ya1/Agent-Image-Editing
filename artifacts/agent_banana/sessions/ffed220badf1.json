@@ -1,0 +1,103 @@
+{
+  "session_id": "ffed220badf1",
+  "turns": [
+    {
+      "instruction": "remove spectacles of women and change the hair color to blue",
+      "parsed_edits": [
+        {
+          "edit_id": "edit-1",
+          "original_text": "remove spectacles of women",
+          "verb": "remove",
+          "target": "spectacles of women",
+          "scope": "local",
+          "priority": 0,
+          "dependencies": [],
+          "modifiers": []
+        },
+        {
+          "edit_id": "edit-2",
+          "original_text": "change the hair color to blue",
+          "verb": "adjust",
+          "target": "hair color to blue",
+          "scope": "local",
+          "priority": 1,
+          "dependencies": [],
+          "modifiers": []
+        }
+      ],
+      "selected_plan": {
+        "plan_id": "plan-001",
+        "score": 0.6636,
+        "score_breakdown": {
+          "order_alignment": 1.0,
+          "locality": 1.0,
+          "dependency_score": 1.0,
+          "entity_bonus": 0.55,
+          "mode_fit": 1.0,
+          "learned_value": 0.3702,
+          "risk_penalty": 0.15,
+          "tool_switch_penalty": 0.05,
+          "total": 0.6636
+        },
+        "steps": [
+          {
+            "step_id": "edit-1-preview_tight",
+            "edit_id": "edit-1",
+            "order": 1,
+            "verb": "remove",
+            "target": "spectacles of women",
+            "scope": "local",
+            "mode": "preview_tight",
+            "prompt": "remove spectacles of women. Target: spectacles of women. Treat this as a very tight local edit centered on the target object only.",
+            "padding": 10,
+            "risk": 0.12
+          },
+          {
+            "step_id": "edit-2-preview_local",
+            "edit_id": "edit-2",
+            "order": 2,
+            "verb": "adjust",
+            "target": "hair color to blue",
+            "scope": "local",
+            "mode": "preview_local",
+            "prompt": "change the hair color to blue. Target: hair color to blue. Treat this as a tight local edit after preview localization.",
+            "padding": 22,
+            "risk": 0.18
+          }
+        ]
+      },
+      "reward": 0.2371,
+      "bboxes": [
+        {
+          "left": 83,
+          "top": 121,
+          "right": 185,
+          "bottom": 158,
+          "width": 102,
+          "height": 37
+        },
+        {
+          "left": 39,
+          "top": 7,
+          "right": 201,
+          "bottom": 146,
+          "width": 162,
+          "height": 139
+        }
+      ]
+    }
+  ],
+  "folded_context": {
+    "summary": "1 prior edit turn(s). Most frequent targets: spectacles of women, hair color to blue. Most common edit verbs: remove, adjust. Average quality reward so far: 0.24.",
+    "active_entities": [
+      "spectacles of women",
+      "hair color to blue"
+    ],
+    "constraints": [
+      "Preserve regions outside the inferred bounding box unless the edit is explicitly global.",
+      "Reuse prior entities and style cues when the user continues a session.",
+      "Prefer lower-risk local edits before broad restyling steps."
+    ],
+    "turn_count": 1
+  }
+}

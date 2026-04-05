@@ -1,0 +1,165 @@
+{
+  "session_id": "7f2e4ce073ac",
+  "turns": [
+    {
+      "instruction": "change the hair color to dark pink and remove glasses and remove sofa and remove paper",
+      "parsed_edits": [
+        {
+          "edit_id": "edit-1",
+          "original_text": "change the hair color to dark pink",
+          "verb": "adjust",
+          "target": "hair color to dark pink",
+          "scope": "local",
+          "priority": 0,
+          "dependencies": [],
+          "modifiers": []
+        },
+        {
+          "edit_id": "edit-2",
+          "original_text": "remove glasses",
+          "verb": "remove",
+          "target": "glasses",
+          "scope": "local",
+          "priority": 1,
+          "dependencies": [],
+          "modifiers": []
+        },
+        {
+          "edit_id": "edit-3",
+          "original_text": "remove sofa",
+          "verb": "remove",
+          "target": "sofa",
+          "scope": "local",
+          "priority": 2,
+          "dependencies": [],
+          "modifiers": []
+        },
+        {
+          "edit_id": "edit-4",
+          "original_text": "remove paper",
+          "verb": "remove",
+          "target": "paper",
+          "scope": "local",
+          "priority": 3,
+          "dependencies": [],
+          "modifiers": []
+        }
+      ],
+      "selected_plan": {
+        "plan_id": "plan-014",
+        "score": 0.6734,
+        "score_breakdown": {
+          "order_alignment": 1.0,
+          "locality": 1.0,
+          "dependency_score": 1.0,
+          "entity_bonus": 0.55,
+          "mode_fit": 0.84,
+          "learned_value": 0.438,
+          "risk_penalty": 0.18,
+          "tool_switch_penalty": 0.0,
+          "total": 0.6734
+        },
+        "steps": [
+          {
+            "step_id": "edit-1-preview_local",
+            "edit_id": "edit-1",
+            "order": 1,
+            "verb": "adjust",
+            "target": "hair color to dark pink",
+            "scope": "local",
+            "mode": "preview_local",
+            "prompt": "change the hair color to dark pink. Target: hair color to dark pink. Treat this as a tight local edit after preview localization.",
+            "padding": 22,
+            "risk": 0.18
+          },
+          {
+            "step_id": "edit-2-preview_local",
+            "edit_id": "edit-2",
+            "order": 2,
+            "verb": "remove",
+            "target": "glasses",
+            "scope": "local",
+            "mode": "preview_local",
+            "prompt": "remove glasses. Target: glasses. Treat this as a tight local edit after preview localization.",
+            "padding": 22,
+            "risk": 0.18
+          },
+          {
+            "step_id": "edit-3-preview_local",
+            "edit_id": "edit-3",
+            "order": 3,
+            "verb": "remove",
+            "target": "sofa",
+            "scope": "local",
+            "mode": "preview_local",
+            "prompt": "remove sofa. Target: sofa. Treat this as a tight local edit after preview localization.",
+            "padding": 22,
+            "risk": 0.18
+          },
+          {
+            "step_id": "edit-4-preview_local",
+            "edit_id": "edit-4",
+            "order": 4,
+            "verb": "remove",
+            "target": "paper",
+            "scope": "local",
+            "mode": "preview_local",
+            "prompt": "remove paper. Target: paper. Treat this as a tight local edit after preview localization.",
+            "padding": 22,
+            "risk": 0.18
+          }
+        ]
+      },
+      "reward": 0.2147,
+      "bboxes": [
+        {
+          "left": 31,
+          "top": 3,
+          "right": 234,
+          "bottom": 155,
+          "width": 203,
+          "height": 152
+        },
+        {
+          "left": 130,
+          "top": 93,
+          "right": 234,
+          "bottom": 163,
+          "width": 104,
+          "height": 70
+        },
+        {
+          "left": 149,
+          "top": 199,
+          "right": 331,
+          "bottom": 441,
+          "width": 182,
+          "height": 242
+        },
+        {
+          "left": 149,
+          "top": 199,
+          "right": 331,
+          "bottom": 441,
+          "width": 182,
+          "height": 242
+        }
+      ]
+    }
+  ],
+  "folded_context": {
+    "summary": "1 prior edit turn(s). Most frequent targets: hair color to dark pink, glasses, sofa, paper. Most common edit verbs: remove, adjust. Average quality reward so far: 0.21.",
+    "active_entities": [
+      "hair color to dark pink",
+      "glasses",
+      "sofa",
+      "paper"
+    ],
+    "constraints": [
+      "Preserve regions outside the inferred bounding box unless the edit is explicitly global.",
+      "Reuse prior entities and style cues when the user continues a session.",
+      "Prefer lower-risk local edits before broad restyling steps."
+    ],
+    "turn_count": 1
+  }
+}

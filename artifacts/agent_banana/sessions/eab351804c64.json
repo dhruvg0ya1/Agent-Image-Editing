@@ -1,0 +1,134 @@
+{
+  "session_id": "eab351804c64",
+  "turns": [
+    {
+      "instruction": "remove glasses and change the hair color to sky blue and remove the pot",
+      "parsed_edits": [
+        {
+          "edit_id": "edit-1",
+          "original_text": "remove glasses",
+          "verb": "remove",
+          "target": "glasses",
+          "scope": "local",
+          "priority": 0,
+          "dependencies": [],
+          "modifiers": []
+        },
+        {
+          "edit_id": "edit-2",
+          "original_text": "change the hair color to sky blue",
+          "verb": "adjust",
+          "target": "hair color to sky blue",
+          "scope": "local",
+          "priority": 1,
+          "dependencies": [],
+          "modifiers": []
+        },
+        {
+          "edit_id": "edit-3",
+          "original_text": "remove the pot",
+          "verb": "remove",
+          "target": "pot",
+          "scope": "local",
+          "priority": 2,
+          "dependencies": [],
+          "modifiers": []
+        }
+      ],
+      "selected_plan": {
+        "plan_id": "plan-002",
+        "score": 0.6833,
+        "score_breakdown": {
+          "order_alignment": 1.0,
+          "locality": 1.0,
+          "dependency_score": 1.0,
+          "entity_bonus": 0.55,
+          "mode_fit": 0.92,
+          "learned_value": 0.597,
+          "risk_penalty": 0.16,
+          "tool_switch_penalty": 0.05,
+          "total": 0.6833
+        },
+        "steps": [
+          {
+            "step_id": "edit-1-preview_tight",
+            "edit_id": "edit-1",
+            "order": 1,
+            "verb": "remove",
+            "target": "glasses",
+            "scope": "local",
+            "mode": "preview_tight",
+            "prompt": "remove glasses. Target: glasses. Treat this as a very tight local edit centered on the target object only.",
+            "padding": 10,
+            "risk": 0.12
+          },
+          {
+            "step_id": "edit-2-preview_local",
+            "edit_id": "edit-2",
+            "order": 2,
+            "verb": "adjust",
+            "target": "hair color to sky blue",
+            "scope": "local",
+            "mode": "preview_local",
+            "prompt": "change the hair color to sky blue. Target: hair color to sky blue. Treat this as a tight local edit after preview localization.",
+            "padding": 22,
+            "risk": 0.18
+          },
+          {
+            "step_id": "edit-3-preview_local",
+            "edit_id": "edit-3",
+            "order": 3,
+            "verb": "remove",
+            "target": "pot",
+            "scope": "local",
+            "mode": "preview_local",
+            "prompt": "remove the pot. Target: pot. Treat this as a tight local edit after preview localization.",
+            "padding": 22,
+            "risk": 0.18
+          }
+        ]
+      },
+      "reward": 0.2243,
+      "bboxes": [
+        {
+          "left": 130,
+          "top": 93,
+          "right": 234,
+          "bottom": 163,
+          "width": 104,
+          "height": 70
+        },
+        {
+          "left": 13,
+          "top": 2,
+          "right": 224,
+          "bottom": 153,
+          "width": 211,
+          "height": 151
+        },
+        {
+          "left": 149,
+          "top": 199,
+          "right": 331,
+          "bottom": 441,
+          "width": 182,
+          "height": 242
+        }
+      ]
+    }
+  ],
+  "folded_context": {
+    "summary": "1 prior edit turn(s). Most frequent targets: glasses, hair color to sky blue, pot. Most common edit verbs: remove, adjust. Average quality reward so far: 0.22.",
+    "active_entities": [
+      "glasses",
+      "hair color to sky blue",
+      "pot"
+    ],
+    "constraints": [
+      "Preserve regions outside the inferred bounding box unless the edit is explicitly global.",
+      "Reuse prior entities and style cues when the user continues a session.",
+      "Prefer lower-risk local edits before broad restyling steps."
+    ],
+    "turn_count": 1
+  }
+}

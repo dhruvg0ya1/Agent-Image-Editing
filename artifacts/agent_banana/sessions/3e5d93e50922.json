@@ -1,0 +1,72 @@
+{
+  "session_id": "3e5d93e50922",
+  "turns": [
+    {
+      "instruction": "remove the door which is left side of the women",
+      "parsed_edits": [
+        {
+          "edit_id": "edit-1",
+          "original_text": "remove the door which is left side of the women",
+          "verb": "remove",
+          "target": "door which is left side of the women",
+          "scope": "local",
+          "priority": 0,
+          "dependencies": [],
+          "modifiers": []
+        }
+      ],
+      "selected_plan": {
+        "plan_id": "plan-002",
+        "score": 0.6734,
+        "score_breakdown": {
+          "order_alignment": 1.0,
+          "locality": 1.0,
+          "dependency_score": 1.0,
+          "entity_bonus": 0.55,
+          "mode_fit": 0.76,
+          "learned_value": 0.5,
+          "risk_penalty": 0.18,
+          "tool_switch_penalty": 0.0,
+          "total": 0.6734
+        },
+        "steps": [
+          {
+            "step_id": "edit-1-preview_local",
+            "edit_id": "edit-1",
+            "order": 1,
+            "verb": "remove",
+            "target": "door which is left side of the women",
+            "scope": "local",
+            "mode": "preview_local",
+            "prompt": "remove the door which is left side of the women. Target: door which is left side of the women. Treat this as a tight local edit after preview localization.",
+            "padding": 22,
+            "risk": 0.18
+          }
+        ]
+      },
+      "reward": 0.7859,
+      "bboxes": [
+        {
+          "left": 0,
+          "top": 0,
+          "right": 189,
+          "bottom": 370,
+          "width": 189,
+          "height": 370
+        }
+      ]
+    }
+  ],
+  "folded_context": {
+    "summary": "1 prior edit turn(s). Most frequent targets: door which is left side of the women. Most common edit verbs: remove. Average quality reward so far: 0.79.",
+    "active_entities": [
+      "door which is left side of the women"
+    ],
+    "constraints": [
+      "Preserve regions outside the inferred bounding box unless the edit is explicitly global.",
+      "Reuse prior entities and style cues when the user continues a session.",
+      "Prefer lower-risk local edits before broad restyling steps."
+    ],
+    "turn_count": 1
+  }
+}

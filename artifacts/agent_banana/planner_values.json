@@ -1,0 +1,192 @@
+{
+  "action_values": {
+    "replace|local|preview_tight|spectacles worn by the grandma": {
+      "value": 0.7690732135991653,
+      "visits": 7
+    },
+    "replace|local|preview_tight|spectacles worn by grandma": {
+      "value": 0.56,
+      "visits": 2
+    },
+    "remove|local|preview_tight|two glasses present": {
+      "value": 0.56,
+      "visits": 3
+    },
+    "replace|local|preview_tight|spectacles of the grandma": {
+      "value": 0.56,
+      "visits": 1
+    },
+    "replace|local|preview_tight|two glasses present": {
+      "value": 0.56,
+      "visits": 1
+    },
+    "remove|local|preview_tight|glasses": {
+      "value": 0.7651422698114183,
+      "visits": 22
+    },
+    "remove|local|preview_tight|water-glasses": {
+      "value": 0.8218985642096345,
+      "visits": 3
+    },
+    "remove|local|preview_local|water-cupsfrom the table": {
+      "value": 0.8271358634599674,
+      "visits": 1
+    },
+    "remove|local|preview_tight|spectacles": {
+      "value": 0.7909276010679754,
+      "visits": 1
+    },
+    "remove|local|preview_tight|two glasses": {
+      "value": 0.8790904641295468,
+      "visits": 1
+    },
+    "remove|local|preview_tight|glasses of the grandma": {
+      "value": 0.8044157167764565,
+      "visits": 1
+    },
+    "remove|local|preview_local|elephants": {
+      "value": 0.906399019885025,
+      "visits": 1
+    },
+    "adjust|local|preview_local|colour of the elephant's tusk to blue": {
+      "value": 0.45429384387199295,
+      "visits": 1
+    },
+    "adjust|local|preview_local|convert all the tusks to blue": {
+      "value": 0.4185976687087235,
+      "visits": 1
+    },
+    "adjust|local|preview_local|colour every tusk to blue": {
+      "value": 0.7836709693281702,
+      "visits": 1
+    },
+    "remove|local|preview_local|all the tusks": {
+      "value": 0.4992888899418004,
+      "visits": 1
+    },
+    "adjust|local|preview_local|colour all the tusks blue": {
+      "value": 0.36946069353667393,
+      "visits": 1
+    },
+    "adjust|local|preview_local|colour all tusks blue": {
+      "value": 0.3162954455856417,
+      "visits": 1
+    },
+    "adjust|local|preview_local|Colour all the tusks blue": {
+      "value": 0.8080302676626206,
+      "visits": 1
+    },
+    "remove|local|preview_local|spatula": {
+      "value": 0.11653966172175234,
+      "visits": 2
+    },
+    "remove|local|preview_local|2 glasses": {
+      "value": 0.16800000000000004,
+      "visits": 1
+    },
+    "remove|local|preview_local|glasses form the table": {
+      "value": 0.06507932344350464,
+      "visits": 1
+    },
+    "adjust|local|preview_local|dye the lady's hair blue": {
+      "value": 0.06507932344350464,
+      "visits": 1
+    },
+    "remove|local|preview_local|spatual": {
+      "value": 0.11153423241558341,
+      "visits": 1
+    },
+    "adjust|local|preview_local|glass kept": {
+      "value": 0.11153423241558341,
+      "visits": 1
+    },
+    "remove|local|preview_local|door which is left side of the women": {
+      "value": 0.7859489943471475,
+      "visits": 1
+    },
+    "remove|local|preview_local|white door": {
+      "value": 0.22698781149258682,
+      "visits": 4
+    },
+    "adjust|local|preview_local|keep every thing else same": {
+      "value": 0.4834628645017708,
+      "visits": 1
+    },
+    "adjust|local|preview_local|keep everything as it is": {
+      "value": 0.09029363292787018,
+      "visits": 1
+    },
+    "adjust|local|preview_local|keep all the things as it is": {
+      "value": 0.2375067978463205,
+      "visits": 1
+    },
+    "adjust|local|preview_local|edit the object": {
+      "value": 0.04200000000000004,
+      "visits": 1
+    },
+    "remove|local|preview_local|door": {
+      "value": 0.40652192981661495,
+      "visits": 2
+    },
+    "remove|local|preview_local|white door but keep everything as the same": {
+      "value": 0.9236196209712962,
+      "visits": 1
+    },
+    "remove|local|preview_local|spectacles of women": {
+      "value": 0.23789503389137454,
+      "visits": 2
+    },
+    "adjust|local|preview_local|hair color to blue": {
+      "value": 0.23878210982937598,
+      "visits": 2
+    },
+    "remove|local|preview_tight|spectacles of women": {
+      "value": 0.23710768680079086,
+      "visits": 1
+    },
+    "adjust|local|preview_local|hair color to red": {
+      "value": 0.2518903820776931,
+      "visits": 1
+    },
+    "remove|local|preview_local|spectacles of the women": {
+      "value": 0.2518903820776931,
+      "visits": 1
+    },
+    "remove|local|preview_local|glasses": {
+      "value": 0.23329925495960954,
+      "visits": 2
+    },
+    "remove|local|preview_local|one small dough": {
+      "value": 0.2518903820776931,
+      "visits": 1
+    },
+    "adjust|local|preview_local|hair color to sky blue": {
+      "value": 0.2243029732699805,
+      "visits": 1
+    },
+    "remove|local|preview_local|pot": {
+      "value": 0.2243029732699805,
+      "visits": 1
+    },
+    "adjust|local|preview_local|hair color to dark pink": {
+      "value": 0.214708127841526,
+      "visits": 1
+    },
+    "remove|local|preview_local|sofa": {
+      "value": 0.214708127841526,
+      "visits": 1
+    },
+    "remove|local|preview_local|paper": {
+      "value": 0.214708127841526,
+      "visits": 1
+    },
+    "adjust|local|preview_local|hair color to rainbow color": {
+      "value": 0.23533353492478798,
+      "visits": 1
+    },
+    "remove|local|preview_local|cardboard box": {
+      "value": 0.20031739482465605,
+      "visits": 1
+    }
+  }
+}

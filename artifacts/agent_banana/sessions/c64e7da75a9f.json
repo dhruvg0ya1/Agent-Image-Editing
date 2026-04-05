@@ -1,0 +1,189 @@
+{
+  "session_id": "c64e7da75a9f",
+  "turns": [
+    {
+      "instruction": "Remove the glasses on the table",
+      "parsed_edits": [
+        {
+          "edit_id": "edit-1",
+          "original_text": "Remove the glasses on the table",
+          "verb": "remove",
+          "target": "glasses",
+          "scope": "local",
+          "priority": 0,
+          "dependencies": [],
+          "modifiers": [
+            "the table"
+          ]
+        }
+      ],
+      "selected_plan": {
+        "plan_id": "plan-001",
+        "score": 0.821,
+        "score_breakdown": {
+          "order_alignment": 1.0,
+          "locality": 1.0,
+          "dependency_score": 1.0,
+          "entity_bonus": 0.55,
+          "mode_fit": 1.0,
+          "learned_value": 0.8,
+          "risk_penalty": 0.12,
+          "tool_switch_penalty": 0.0,
+          "total": 0.821
+        },
+        "steps": [
+          {
+            "step_id": "edit-1-preview_tight",
+            "edit_id": "edit-1",
+            "order": 1,
+            "verb": "remove",
+            "target": "glasses",
+            "scope": "local",
+            "mode": "preview_tight",
+            "prompt": "Remove the glasses on the table. Target: glasses. Modifiers: the table. Treat this as a very tight local edit centered on the target object only.",
+            "padding": 10,
+            "risk": 0.12
+          }
+        ]
+      },
+      "reward": 0.9391,
+      "bboxes": [
+        {
+          "left": 97,
+          "top": 120,
+          "right": 169,
+          "bottom": 164,
+          "width": 72,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "instruction": "Remove the water-glasses on the table",
+      "parsed_edits": [
+        {
+          "edit_id": "edit-1",
+          "original_text": "Remove the water-glasses on the table",
+          "verb": "remove",
+          "target": "water-glasses",
+          "scope": "local",
+          "priority": 0,
+          "dependencies": [],
+          "modifiers": [
+            "the table"
+          ]
+        }
+      ],
+      "selected_plan": {
+        "plan_id": "plan-001",
+        "score": 0.767,
+        "score_breakdown": {
+          "order_alignment": 1.0,
+          "locality": 1.0,
+          "dependency_score": 1.0,
+          "entity_bonus": 0.55,
+          "mode_fit": 1.0,
+          "learned_value": 0.5,
+          "risk_penalty": 0.12,
+          "tool_switch_penalty": 0.0,
+          "total": 0.767
+        },
+        "steps": [
+          {
+            "step_id": "edit-1-preview_tight",
+            "edit_id": "edit-1",
+            "order": 1,
+            "verb": "remove",
+            "target": "water-glasses",
+            "scope": "local",
+            "mode": "preview_tight",
+            "prompt": "Remove the water-glasses on the table. Target: water-glasses. Modifiers: the table. Treat this as a very tight local edit centered on the target object only.",
+            "padding": 10,
+            "risk": 0.12
+          }
+        ]
+      },
+      "reward": 0.9227,
+      "bboxes": [
+        {
+          "left": 96,
+          "top": 120,
+          "right": 168,
+          "bottom": 164,
+          "width": 72,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "instruction": "Remove the water-glasses on the table",
+      "parsed_edits": [
+        {
+          "edit_id": "edit-1",
+          "original_text": "Remove the water-glasses on the table",
+          "verb": "remove",
+          "target": "water-glasses",
+          "scope": "local",
+          "priority": 0,
+          "dependencies": [],
+          "modifiers": [
+            "the table"
+          ]
+        }
+      ],
+      "selected_plan": {
+        "plan_id": "plan-001",
+        "score": 0.9061,
+        "score_breakdown": {
+          "order_alignment": 1.0,
+          "locality": 1.0,
+          "dependency_score": 1.0,
+          "entity_bonus": 1.0,
+          "mode_fit": 1.0,
+          "learned_value": 0.9227,
+          "risk_penalty": 0.12,
+          "tool_switch_penalty": 0.0,
+          "total": 0.9061
+        },
+        "steps": [
+          {
+            "step_id": "edit-1-preview_tight",
+            "edit_id": "edit-1",
+            "order": 1,
+            "verb": "remove",
+            "target": "water-glasses",
+            "scope": "local",
+            "mode": "preview_tight",
+            "prompt": "Remove the water-glasses on the table. Target: water-glasses. Modifiers: the table. Treat this as a very tight local edit centered on the target object only.",
+            "padding": 10,
+            "risk": 0.12
+          }
+        ]
+      },
+      "reward": 0.7359,
+      "bboxes": [
+        {
+          "left": 0,
+          "top": 280,
+          "right": 479,
+          "bottom": 639,
+          "width": 479,
+          "height": 359
+        }
+      ]
+    }
+  ],
+  "folded_context": {
+    "summary": "3 prior edit turn(s). Most frequent targets: water-glasses, glasses. Most common edit verbs: remove. Average quality reward so far: 0.87.",
+    "active_entities": [
+      "water-glasses",
+      "glasses"
+    ],
+    "constraints": [
+      "Preserve regions outside the inferred bounding box unless the edit is explicitly global.",
+      "Reuse prior entities and style cues when the user continues a session.",
+      "Prefer lower-risk local edits before broad restyling steps."
+    ],
+    "turn_count": 3
+  }
+}

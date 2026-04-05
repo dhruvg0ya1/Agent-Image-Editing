@@ -1,0 +1,105 @@
+{
+  "session_id": "a6eeca0008d3",
+  "turns": [
+    {
+      "instruction": "remove the spatual and glass kept on the table",
+      "parsed_edits": [
+        {
+          "edit_id": "edit-1",
+          "original_text": "remove the spatual",
+          "verb": "remove",
+          "target": "spatual",
+          "scope": "local",
+          "priority": 0,
+          "dependencies": [],
+          "modifiers": []
+        },
+        {
+          "edit_id": "edit-2",
+          "original_text": "glass kept on the table",
+          "verb": "adjust",
+          "target": "glass kept",
+          "scope": "local",
+          "priority": 1,
+          "dependencies": [],
+          "modifiers": [
+            "the table"
+          ]
+        }
+      ],
+      "selected_plan": {
+        "plan_id": "plan-004",
+        "score": 0.6902,
+        "score_breakdown": {
+          "order_alignment": 1.0,
+          "locality": 1.0,
+          "dependency_score": 1.0,
+          "entity_bonus": 0.55,
+          "mode_fit": 0.88,
+          "learned_value": 0.5,
+          "risk_penalty": 0.18,
+          "tool_switch_penalty": 0.0,
+          "total": 0.6902
+        },
+        "steps": [
+          {
+            "step_id": "edit-1-preview_local",
+            "edit_id": "edit-1",
+            "order": 1,
+            "verb": "remove",
+            "target": "spatual",
+            "scope": "local",
+            "mode": "preview_local",
+            "prompt": "remove the spatual. Target: spatual. Treat this as a tight local edit after preview localization.",
+            "padding": 22,
+            "risk": 0.18
+          },
+          {
+            "step_id": "edit-2-preview_local",
+            "edit_id": "edit-2",
+            "order": 2,
+            "verb": "adjust",
+            "target": "glass kept",
+            "scope": "local",
+            "mode": "preview_local",
+            "prompt": "glass kept on the table. Target: glass kept. Modifiers: the table. Treat this as a tight local edit after preview localization.",
+            "padding": 22,
+            "risk": 0.18
+          }
+        ]
+      },
+      "reward": 0.1115,
+      "bboxes": [
+        {
+          "left": 167,
+          "top": 361,
+          "right": 221,
+          "bottom": 398,
+          "width": 54,
+          "height": 37
+        },
+        {
+          "left": 0,
+          "top": 281,
+          "right": 479,
+          "bottom": 639,
+          "width": 479,
+          "height": 358
+        }
+      ]
+    }
+  ],
+  "folded_context": {
+    "summary": "1 prior edit turn(s). Most frequent targets: spatual, glass kept. Most common edit verbs: remove, adjust. Average quality reward so far: 0.11.",
+    "active_entities": [
+      "spatual",
+      "glass kept"
+    ],
+    "constraints": [
+      "Preserve regions outside the inferred bounding box unless the edit is explicitly global.",
+      "Reuse prior entities and style cues when the user continues a session.",
+      "Prefer lower-risk local edits before broad restyling steps."
+    ],
+    "turn_count": 1
+  }
+}

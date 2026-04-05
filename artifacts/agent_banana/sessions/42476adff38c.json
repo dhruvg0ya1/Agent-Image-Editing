@@ -1,0 +1,196 @@
+{
+  "session_id": "42476adff38c",
+  "turns": [
+    {
+      "instruction": "remove the spectacles of the women and change the hair color to red and remove the door and remove the glasses and remove one small dough",
+      "parsed_edits": [
+        {
+          "edit_id": "edit-1",
+          "original_text": "remove the spectacles of the women",
+          "verb": "remove",
+          "target": "spectacles of the women",
+          "scope": "local",
+          "priority": 0,
+          "dependencies": [],
+          "modifiers": []
+        },
+        {
+          "edit_id": "edit-2",
+          "original_text": "change the hair color to red",
+          "verb": "adjust",
+          "target": "hair color to red",
+          "scope": "local",
+          "priority": 1,
+          "dependencies": [],
+          "modifiers": []
+        },
+        {
+          "edit_id": "edit-3",
+          "original_text": "remove the door",
+          "verb": "remove",
+          "target": "door",
+          "scope": "local",
+          "priority": 2,
+          "dependencies": [],
+          "modifiers": []
+        },
+        {
+          "edit_id": "edit-4",
+          "original_text": "remove the glasses",
+          "verb": "remove",
+          "target": "glasses",
+          "scope": "local",
+          "priority": 3,
+          "dependencies": [],
+          "modifiers": []
+        },
+        {
+          "edit_id": "edit-5",
+          "original_text": "remove one small dough",
+          "verb": "remove",
+          "target": "one small dough",
+          "scope": "local",
+          "priority": 4,
+          "dependencies": [],
+          "modifiers": []
+        }
+      ],
+      "selected_plan": {
+        "plan_id": "plan-001",
+        "score": 0.6868,
+        "score_breakdown": {
+          "order_alignment": 1.0,
+          "locality": 1.0,
+          "dependency_score": 1.0,
+          "entity_bonus": 0.55,
+          "mode_fit": 0.84,
+          "learned_value": 0.5122,
+          "risk_penalty": 0.18,
+          "tool_switch_penalty": 0.0,
+          "total": 0.6868
+        },
+        "steps": [
+          {
+            "step_id": "edit-2-preview_local",
+            "edit_id": "edit-2",
+            "order": 1,
+            "verb": "adjust",
+            "target": "hair color to red",
+            "scope": "local",
+            "mode": "preview_local",
+            "prompt": "change the hair color to red. Target: hair color to red. Treat this as a tight local edit after preview localization.",
+            "padding": 22,
+            "risk": 0.18
+          },
+          {
+            "step_id": "edit-1-preview_local",
+            "edit_id": "edit-1",
+            "order": 2,
+            "verb": "remove",
+            "target": "spectacles of the women",
+            "scope": "local",
+            "mode": "preview_local",
+            "prompt": "remove the spectacles of the women. Target: spectacles of the women. Treat this as a tight local edit after preview localization.",
+            "padding": 22,
+            "risk": 0.18
+          },
+          {
+            "step_id": "edit-4-preview_local",
+            "edit_id": "edit-4",
+            "order": 3,
+            "verb": "remove",
+            "target": "glasses",
+            "scope": "local",
+            "mode": "preview_local",
+            "prompt": "remove the glasses. Target: glasses. Treat this as a tight local edit after preview localization.",
+            "padding": 22,
+            "risk": 0.18
+          },
+          {
+            "step_id": "edit-3-preview_local",
+            "edit_id": "edit-3",
+            "order": 4,
+            "verb": "remove",
+            "target": "door",
+            "scope": "local",
+            "mode": "preview_local",
+            "prompt": "remove the door. Target: door. Treat this as a tight local edit after preview localization.",
+            "padding": 22,
+            "risk": 0.18
+          },
+          {
+            "step_id": "edit-5-preview_local",
+            "edit_id": "edit-5",
+            "order": 5,
+            "verb": "remove",
+            "target": "one small dough",
+            "scope": "local",
+            "mode": "preview_local",
+            "prompt": "remove one small dough. Target: one small dough. Treat this as a tight local edit after preview localization.",
+            "padding": 22,
+            "risk": 0.18
+          }
+        ]
+      },
+      "reward": 0.2519,
+      "bboxes": [
+        {
+          "left": 22,
+          "top": 6,
+          "right": 216,
+          "bottom": 151,
+          "width": 194,
+          "height": 145
+        },
+        {
+          "left": 79,
+          "top": 120,
+          "right": 183,
+          "bottom": 158,
+          "width": 104,
+          "height": 38
+        },
+        {
+          "left": 402,
+          "top": 434,
+          "right": 475,
+          "bottom": 616,
+          "width": 73,
+          "height": 182
+        },
+        {
+          "left": 163,
+          "top": 1,
+          "right": 372,
+          "bottom": 335,
+          "width": 209,
+          "height": 334
+        },
+        {
+          "left": 273,
+          "top": 457,
+          "right": 314,
+          "bottom": 494,
+          "width": 41,
+          "height": 37
+        }
+      ]
+    }
+  ],
+  "folded_context": {
+    "summary": "1 prior edit turn(s). Most frequent targets: spectacles of the women, hair color to red, door, glasses, one small dough. Most common edit verbs: remove, adjust. Average quality reward so far: 0.25.",
+    "active_entities": [
+      "spectacles of the women",
+      "hair color to red",
+      "door",
+      "glasses",
+      "one small dough"
+    ],
+    "constraints": [
+      "Preserve regions outside the inferred bounding box unless the edit is explicitly global.",
+      "Reuse prior entities and style cues when the user continues a session.",
+      "Prefer lower-risk local edits before broad restyling steps."
+    ],
+    "turn_count": 1
+  }
+}
