@@ -2,6 +2,14 @@
 
 An agentic image editing pipeline inspired by the [Agent Banana paper](https://arxiv.org/abs/2602.09084) (arXiv:2602.09084). Implements **Image Layer Decomposition (ILD)** for high-fidelity, localized edits with seamless blending.
 
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![Gemini](https://img.shields.io/badge/Gemini-2.5%20Flash-4285F4?style=flat-square&logo=googlegemini&logoColor=white)](https://ai.google.dev/)
+[![Florence-2](https://img.shields.io/badge/Florence--2-grounding-FFD21E?style=flat-square&logo=huggingface&logoColor=black)](https://huggingface.co/microsoft/Florence-2-large)
+[![Docker](https://img.shields.io/badge/docker-ready-2496ED?style=flat-square&logo=docker&logoColor=white)](./Dockerfile)
+[![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](./LICENSE)
+
+**[Live demo on Hugging Face Spaces](https://huggingface.co/spaces/vansh7266/Agent_Crop_M)**
+
 ## ✨ Features
 
 - **Ground-First Local Inpainting** — Locates the target object *before* editing, crops a local patch, and sends it to Gemini for context-aware editing
@@ -56,7 +64,8 @@ User Instruction
 
 ```bash
 # Clone and enter the project
-cd agent-crop
+git clone https://github.com/dhruvg0ya1/Agent-Image-Editing.git
+cd Agent-Image-Editing
 
 # Create virtual environment
 python -m venv .venv
@@ -98,11 +107,43 @@ src/agent_banana/
 ├── vlm_localizer.py          # Florence-2 grounding
 ├── targeting.py              # Target classification + bbox refinement
 ├── planning.py               # RL-based edit planner
+├── react_executor.py         # ReAct loop: think -> act -> observe
+├── tool_registry.py          # Tool schemas the agent may call
 ├── quality.py                # Quality evaluation judge
+├── vlm_critic.py             # VLM-based quality scoring
+├── seam_detector.py          # Blend-seam detection on recomposed output
 ├── models.py                 # Data models (BoundingBox, StepResult, etc.)
 ├── memory.py                 # Context folding + session storage
+├── cli.py                    # Command-line entry point
 └── config.py                 # Environment configuration
+
+tests/
+└── test_agent_banana.py      # Unit tests
+
+examples/sessions/            # Recorded agent runs: reasoning, edits, folded context
 ```
+
+## Docker
+
+```bash
+docker build -t agent-banana .
+docker run -p 7860:7860 -e GEMINI_API_KEY=your-key-here agent-banana
+```
+
+## Tests
+
+```bash
+pip install -e ".[dev]"
+pytest -q
+```
+
+## Example Sessions
+
+`examples/sessions/*.json` are real recorded runs. Each captures the full agent
+trace for one instruction: the parsed edit plan, the grounding phrases, the
+bounding boxes chosen, per-step quality scores, and the folded context carried
+into the next turn. Useful for seeing how the ReAct loop behaves without
+running the model yourself.
 
 ## 🔧 Configuration
 
